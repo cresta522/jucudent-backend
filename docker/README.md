@@ -76,3 +76,9 @@ docker-compose exec app php artisan ide-helper:models -W
 ```
 docker-compose exec app composer require doctrine/dbal
 ```
+
+## Debugbar
+```
+docker-compose exec app composer require --dev barryvdh/laravel-debugbar
+docker-compose exec app php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+```
