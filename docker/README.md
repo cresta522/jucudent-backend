@@ -132,3 +132,12 @@ docker-compose exec app composer require doctrine/dbal
 docker-compose exec app composer require --dev barryvdh/laravel-debugbar
 docker-compose exec app php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
 ```
+
+## 認証機能
+
+```bash
+docker-compose exec app composer require laravel/ui
+docker-compose exec app php artisan ui vue --auth
+docker-compose exec app php artisan migrate
+```
+
