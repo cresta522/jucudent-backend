@@ -51,8 +51,23 @@ mix.js('resources/js/app.js', 'public/js').vue()
 ## AdminLTE3 導入
 
 ```
-composer require jeroennoten/laravel-adminlte
-php artisan adminlte:install
-php artisan adminlte:install --only=auth_views
-php artisan adminlte:install --only=main_views
+docker-compose exec app composer require jeroennoten/laravel-adminlte
+docker-compose exec app php artisan adminlte:install
+docker-compose exec app php artisan adminlte:install --only=auth_views
+docker-compose exec app php artisan adminlte:install --only=main_views
+```
+
+## IDE-Helper 導入
+```
+docker-compose exec app composer require --dev barryvdh/laravel-ide-helper
+```
+
+## IDE-Helper 実行
+```
+# PHPDoc generation for Laravel Facades
+docker-compose exec app php artisan ide-helper:generate 
+
+# PHPDocs for models
+docker-compose exec app php artisan ide-helper:models -W
+
 ```
