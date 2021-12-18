@@ -48,3 +48,11 @@ mix.js('resources/js/app.js', 'public/js').vue()
     .ts('resources/**/*', 'public/js/app.js'); //　<- 追記  
 ```
 
+## AdminLTE3 導入
+
+```
+composer require jeroennoten/laravel-adminlte
+php artisan adminlte:install
+php artisan adminlte:install --only=auth_views
+php artisan adminlte:install --only=main_views
+```
