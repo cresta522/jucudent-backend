@@ -26,8 +26,10 @@ npm run dev
 php artisan migrate  
 php artisan vendor:publish --tag=jetstream-views  
 
-## TSインストール
-npm install -g typescript  
+## TSインストール 
+`docker-compose exec -u root app npm install -g typescript`  
+または、rootで入って  
+`npm install -g typescript`  
 
 バージョンが表示されればOK  
 tsc --version  
