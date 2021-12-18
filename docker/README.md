@@ -26,9 +26,35 @@ appコンテナに入る
 ## livewire インストール
 
 ```bash
-docker-compose exec app composer require livewire/livewire  
-docker-compose exec app npm install  
-docker-compose exec app npm run dev  
+docker-compose exec app composer require livewire/livewire
+docker-compose exec app npm install
+docker-compose exec app npm run dev
+```
+
+## 一度gitへ
+
+gitに上げる前に、`.gitignore`に以下追加
+
+```
+/public/js/app.js
+/public/css/app.css
+```
+
+## migrateの前に
+
+```php
+# app\Providers\AppServiceProvider.php
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+```
+
+## migrate
+
+```bash
 docker-compose exec app php artisan migrate
 ```
 
