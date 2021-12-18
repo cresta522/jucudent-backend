@@ -71,3 +71,8 @@ docker-compose exec app php artisan ide-helper:generate
 docker-compose exec app php artisan ide-helper:models -W
 
 ```
+
+## マイグレーションでカラム定義変更
+```
+docker-compose exec app composer require doctrine/dbal
+```
