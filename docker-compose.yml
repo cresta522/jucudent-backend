@@ -28,5 +28,11 @@ services:
       - ${WEB_PORT}:80
     depends_on:
       - app
+      - mailhog
     volumes:
       - ./src/:/app
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
