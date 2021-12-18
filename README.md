@@ -18,6 +18,8 @@
 ### Repository
 git@github.com:cresta522/Jucudent.git
 
+https://github.com/cresta522/Jucudent
+
 ### 注意事項
 
 必ず作業前・一日の初めなど着手するタイミングで最新状態pullしてください。
